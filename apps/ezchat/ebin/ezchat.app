@@ -1,0 +1,12 @@
+{application,ezchat,
+             [{description,"Simple chat messaging server"},
+              {vsn,"0.1.0"},
+              {applications,[kernel,stdlib,mnesia,cowboy,ranch,amqp_client,
+                             rabbit_common]},
+              {modules,[connection_handler,connection_store,connection_utils,
+                        echo_handler,ezchat_app,ezchat_server,ezchat_sup,
+                        ezchat_utils,mq_server_emitter,mq_server_receiver,
+                        mq_sup,ping_handler,xproplists]},
+              {registered,[ezchat_sup]},
+              {mod,{ezchat_app,[]}},
+              {env,[]}]}.

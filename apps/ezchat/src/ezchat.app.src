@@ -1,0 +1,29 @@
+{application, ezchat,
+ [
+  {description, "Simple chat messaging server"},
+  {vsn, "0.1.0"},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  mnesia,
+				          cowboy,
+                  ranch,
+                  amqp_client,
+                  rabbit_common
+                 ]},
+  {modules, [
+              ezchat_app,
+              ezchat_sup,
+              ezchat_server,
+              mq_sup,
+              mq_server_receiver,
+              mq_server_emitter,
+              connection_store,
+              connection_handler,
+              echo_handler,
+              cowboy_handler
+            ]},
+  {registered, [ezchat_sup]},
+  {mod, {ezchat_app, []}},
+  {env, []}
+ ]}.
