@@ -11,8 +11,6 @@
 %% API
 -export([start_link/0, start_link/1, stop/0]).
 
-%-export([xturn_domain/0, xturn_port/0, xturn_port_secure/0, xturn_path/0]).
-
 %% gen_server callbacks
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
 
@@ -77,7 +75,7 @@ init([Port]) ->
 	end,
 	
 	log4erl:info("Cowboy server started~n"),
-	%ok = ensure_contact(), % we need to ensure we have clustered before setting up the store.  However, this fails, currently... NEED TO FIX BEFORE WE SCALE OUT MESSAGING!!!
+	%ok = ensure_contact(), % we need to ensure we have clustered before setting up the store.
 	erlang:display("Connection store inited...~n"),
 	connection_store:init(), % initialise Mnesia server for this node.
 	erlang:display("Server running...~n"),
