@@ -58,7 +58,6 @@ lookup(Pid) ->
 
 %% Retrieves a user (or more, should they exist) with a full users details.
 select(undefined, Room) ->
-	erlang:display(Room),
 	select(Room);
 select(Username, Room) ->
 	QH = qlc:q( [U || U <- mnesia:table(messaging_user),

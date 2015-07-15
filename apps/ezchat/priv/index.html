@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Chat Test</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"></link>
+    <script src="lib/xirsys.core.js"></script>
+    <script src="lib/xirsys.signal.js"></script>
+    <script src="lib/app.js"></script>
+  </head>
+
+  <body>
+    <h1>Chat Demo</h1>
+    <section>
+      <form id="login" class="box">
+        <div>
+          <label>Username: </label>
+          <input type="text" id="username" placeholder="enter a username" value="Lee" />
+        </div>
+        <div>
+          <label>Room: </label>
+          <input type="text" id="roomname" placeholder="enter a room name" value="Room" />
+        </div>
+        <div>
+          <button id="login-btn" type="submit">Connect</button>
+        </div>
+      </form>
+      <div id="peers" class="box">
+        <h2>Peers</h2>
+        <div class="peer">
+          <input type="radio" name="peer" value="__all__" checked="checked"/>
+          &lt;All peers&gt;
+        </div> 
+      </div>
+    </section>
+    <section>
+      <div id="messages" class="box"></div>
+      <form id="sendMessage" class="message box">
+        New message: <input type="text" id="message" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </body>
+</html>

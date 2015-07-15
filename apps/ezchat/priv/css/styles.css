@@ -1,0 +1,52 @@
+body {
+  font-family: arial, verdana;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+}
+
+section {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+label {
+  display: inline-block;
+  width: 75px;
+  text-align: right;
+}
+
+.box {
+  position: relative;
+  border: solid 1px #4293C9;
+  border-radius: 4px;
+  margin: 10px;
+  width: 400px;
+  padding: 10px;
+  background: #f8f8ff;
+  box-shadow: inset 1px 2px 3px #c8c8cf;
+}
+
+.peer {
+  position: relative;
+  margin: 0 0 7px 0;
+}
+
+.video-container {
+  display: inline-block;
+  width: 220px;
+  height: 170px;
+}
+
+video {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+#login button {
+  margin-left: 78px;
+}

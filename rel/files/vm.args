@@ -1,0 +1,42 @@
+## Name of the node
+-sname ezchat
+
+## Cookie for distributed erlang
+-setcookie CMSPYEQWOTJDLWGARSQR
+
+## Port to run Cowboy on
+-port 8899
+
+## Domain or IP for service hosting
+-ezchat_domain 127.0.0.1
+
+## Port to display via proxy
+-display_port 8899
+
+## Domain to display
+-display_domain localhost
+
+## Use TLS
+-is_secure false
+
+## Use TLS over proxy
+-display_secure false
+
+## Mnesia data file location
+-mnesia dir '"/tmp/Mnesia.ezchat.node"'
+
+## Redis database config
+
+## Heartbeat management; auto-restarts VM if it dies or becomes unresponsive
+## (Disabled by default..use with caution!)
+-heart
+
+## Enable kernel poll and a few async threads
+##+K true
+##+A 5
+
+## Increase number of concurrent ports/sockets
+##-env ERL_MAX_PORTS 4096
+
+## Tweak GC to run more often
+##-env ERL_FULLSWEEP_AFTER 10

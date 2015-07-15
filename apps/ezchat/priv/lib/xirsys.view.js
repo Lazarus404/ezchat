@@ -1,3 +1,7 @@
+/*****
+ John Resigs micro template engine. Please see John's site for copyright info
+ *****/
+
 (function(){
   var cache = {};
   this.tmpl = function tmpl(str, data){
